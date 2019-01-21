@@ -2,22 +2,21 @@
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
     <context id="MySql">
-        <!-- 生成实现序列化的bean -->
+
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
 
-        <commentGenerator>
+        <commentGenerator type="com.sms.util.mybatis.generator.MyCommentGenerator"></commentGenerator>
 
-        </commentGenerator>
-
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/lh"
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/sms?useUnicode=true&amp;characterEncoding=UTF8"
                         userId="root" password="root"/>
         <javaModelGenerator targetPackage="com.sms.entity.base"
                             targetProject="F:/学生管理项目/后台/sms/src/main/java"/>
-        <sqlMapGenerator targetPackage="com.sms.entity.mapper.base"
+        <sqlMapGenerator targetPackage="com.sms.mapper.base"
                          targetProject="F:/学生管理项目/后台/sms/src/main/resources"/>
-        <javaClientGenerator type="com.sms.entity.mapper.base"
-                             targetPackage="F:/学生管理项目/后台/sms/src/main/java"
-                             targetProject="XMLMAPPER"/>
-        <table tableName="industry_category" alias="industry_category" domainObjectName="IndustryCategory"></table>
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.sms.mapper.base"
+                             targetProject="F:/学生管理项目/后台/sms/src/main/java"/>
+        <table tableName="test" alias="test" domainObjectName="test"></table>
     </context>
 </generatorConfiguration>
