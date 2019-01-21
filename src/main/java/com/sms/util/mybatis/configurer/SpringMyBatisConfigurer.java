@@ -27,9 +27,9 @@ public class SpringMyBatisConfigurer implements TransactionManagementConfigurer 
         bean.setDataSource(dataSource);
         PathMatchingResourcePatternResolver resolver=new PathMatchingResourcePatternResolver();
         List<Resource> list=new ArrayList<>();
-        Resource[] resources=resolver.getResources("classpath:com.sms.mapper.base/*.xml");
+        Resource[] resources=resolver.getResources("classpath:com/sms/mapper/base/*.xml");
         list.addAll(Arrays.asList(resources));
-        resources=resolver.getResources("classpath:com.sms.mapper/*.xml");
+        resources=resolver.getResources("classpath:com/sms/mapper/*.xml");
         list.addAll(Arrays.asList(resources));
         Resource[] resources1=new Resource[list.size()];
         for(int i=0;i<list.size();i++){
