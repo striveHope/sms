@@ -1,0 +1,19 @@
+server:
+  port: 8888
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/sms?useUnicode=true&characterEncoding=UTF8
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+swagger:
+  basePackage: com.sms.controller
+  title: 学生管理系统
+  description: 报名子系统
+  termsOfServiceUrl:
+  version: 1.0
+  pathRegex:
+  contact:
+    name: js
+    url: www.xxx.com
+    email: 123@.qq.com
